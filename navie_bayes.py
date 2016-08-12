@@ -66,6 +66,7 @@ def navie_bayes(X,y):
     wc_nonspam=np.sum(X[nonspam_index,:],axis=0)
 
     # 求概率以及平滑处理
+    # 这里加入平滑其实不是为了解决0/0这种情况,因为分母其实不用考虑到计算中(它们都相同)而是为了解决log0问题.
     prob_tokens_spam = (wc_spam + 1) / (sum(wc_spam) + num_feature)
     prob_tokens_nonspam = (wc_nonspam + 1) / (sum(wc_nonspam) + num_feature)
 
