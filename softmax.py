@@ -6,7 +6,7 @@ import struct
 
 
 class SoftMax(object):
-    """docstring for """
+    """softmax分类器的代码实现 """
     def __init__(self, num_feature, num_class, lamda):
         """构成函数
         Args:
